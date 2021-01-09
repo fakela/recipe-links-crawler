@@ -33,8 +33,8 @@ def delete_cookies(driver, domains=None):
         driver.delete_all_cookies()
 
 
-# Path where you want to save/load cookies to/from aka C:\my\fav\directory\cookies.txt
-cookies_location = "/Users/favourkelvin/Documents/recipe links crawler/cookies.txt"
+
+cookies_location = "/Users/favourkelvin/Documents/recipe-links-crawler/cookies.txt"
 
 # Initial load of the domain that we want to save cookies for
 chrome = webdriver.Chrome('/Users/favourkelvin/Downloads/chromedriver')

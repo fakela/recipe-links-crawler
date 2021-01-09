@@ -40,12 +40,11 @@ def delete_cookies(driver, domains=None):
 
 
 # Path where you want to save/load cookies to/from aka C:\my\fav\directory\cookies.txt
-cookies_location = "/Users/favourkelvin/Documents/recipe links crawler/cookies.txt"
+cookies_location = "/Users/favourkelvin/Documents/recipe-links-crawler/cookies.txt"
 
 # Initial load of the domain that we want to save cookies for
 chrome = webdriver.Chrome('/Users/favourkelvin/Downloads/chromedriver')
 chrome.get("https://www.yummly.com/recipes?q=meatballs&taste-pref-appended=true")
-chrome.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 time.sleep(3)
 save_cookies(chrome, cookies_location)
 
@@ -54,7 +53,7 @@ elements = chrome.find_elements_by_css_selector(".card-title")
 cardTitle = [el.text for el in elements]
 
 # #gets the different meatballs recipe urls/links
-linkUrls = chrome.find_elements_by_css_selector(".w-full")
+elements = chrome.find_elements_by_css_selector(".w-full")
 linkUrls = [el.get_attribute("href") for el in elements]
 
 
