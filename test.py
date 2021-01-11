@@ -4,10 +4,7 @@ import time
 import pandas as pd
 import numpy as np
 import re
-# import save_cookies
 
-#path to save the cookies
-cookies_location = "/Users/favourkelvin/Documents/recipe-links-crawler/cookies.txt"
 
 PATH = "/Users/favourkelvin/Downloads/chromedriver"
 driver = webdriver.Chrome(PATH)
@@ -29,7 +26,7 @@ for i in range(len(incategory)):
 
 
 all_details = []
-# loop through each link to acces the page of each book
+# loop through each link to acces each recipe page
 for link in links:
 	# get one url
 	driver.get(url=link)
@@ -39,10 +36,10 @@ for link in links:
 	# author of the recipe
 	elements = driver.find_elements_by_xpath("/html/body/div[2]/div/main/div[1]/div[2]/div[1]/div[1]/div[4]/div/span/span/a")
 	author = [el.text for el in elements]
-	# ingredient 
+	# ingredients
 	elements = driver.find_elements_by_xpath("//*[@id='ar-calvera-app']/section[1]/fieldset/ul/li/label/span/span")
 	ingredient = [el.text for el in elements]
-	# description comes as string
+	
 	
 	print(Title, author, ingredient)
 	
