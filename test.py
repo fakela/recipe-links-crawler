@@ -9,7 +9,6 @@ import re
 PATH = "/Users/favourkelvin/Downloads/chromedriver"
 driver = webdriver.Chrome(PATH)
 driver.get("https://www.allrecipes.com/search/results/?wt=meatballs&page=1")
-# save_cookies(driver, cookies_location)
 time.sleep(3)
 # find all recipes in the page
 
