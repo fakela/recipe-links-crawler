@@ -4,7 +4,7 @@ import time
 
 from selenium import webdriver
 
-# Initial load of the domain that we want to save cookies for
+
 chrome = webdriver.Chrome('/Users/favourkelvin/Downloads/chromedriver')
 chrome.get("https://www.yummly.com/recipes?q=meatballs&taste-pref-appended=true")
 time.sleep(3)
